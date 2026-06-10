@@ -18,6 +18,23 @@ public class BookController {
 		return bArr;
 	}
 
+	public Book[] getSortedBookByRentDesc(){
+		Book[] sortedBook = new Book[5];
+		for(int i = 0; i < bArr.length; i++){
+			sortedBook[i] = bArr[i];
+		}
+		for(int i = 0; i < sortedBook.length-1; i++){
+			for(int j = 0; j < sortedBook.length -1 -i; j++){
+				if (sortedBook[j].getRentCount() < sortedBook[j + 1].getRentCount()) {
+					Book temp = sortedBook[j];
+					sortedBook[j] = sortedBook[j + 1];
+					sortedBook[j + 1] = temp;
+				}
+			}
+		}
+		return sortedBook;
+	}
+
 	public int sumRentCount(){
 		int sum = 0;
 		for(Book book : bArr){

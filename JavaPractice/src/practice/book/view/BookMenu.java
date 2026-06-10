@@ -26,5 +26,10 @@ public class BookMenu {
 				System.out.printf("%s 도서는 인기 도서(Best Seller)입니다.\n",book.getTitle());
 			}
 		}
+		System.out.println("========== 도서 정보 정렬 ==========");
+		Book[] sortedBook = bcm.getSortedBookByRentDesc();
+		for(Book book : sortedBook){
+			System.out.println(book.inform());
+		}
 	}
 }
