@@ -11,24 +11,24 @@ public class Run {
 		// 사운드 클래스.
 		//람다식 표현
 		Thread thread = new Thread(() -> {
-				for(int i = 0; i < 5; i++){
-					System.out.println("띵");
-					try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					}
+			for(int i = 0; i < 5; i++){
+				System.out.println("띵");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
 				}
+			}
 		});
 
 		Thread thread2 = new Thread(() -> {
-				Toolkit tk = Toolkit.getDefaultToolkit();
-				for(int i = 0; i < 5; i++){
-					tk.beep();
-					try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					}
+			Toolkit tk = Toolkit.getDefaultToolkit();
+			for(int i = 0; i < 5; i++){
+				tk.beep();
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
 				}
+			}
 		});
 
 		thread.start();
