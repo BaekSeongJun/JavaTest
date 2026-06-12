@@ -1,8 +1,8 @@
-package chapter15.page07;
+package chapter15.page07_2;
 
 import java.awt.*;
 
-public class ToolKitThread extends Thread {
+public class ToolKitThread2 implements Runnable {
 	@Override
 	public void run() {
 		Toolkit tk = Toolkit.getDefaultToolkit();
