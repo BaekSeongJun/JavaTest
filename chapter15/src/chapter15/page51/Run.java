@@ -18,6 +18,6 @@ public class Run {
 		Thread.sleep(100);
 		System.out.printf("MyThread1 State : %s\n",mt1.getState());
 		System.out.printf("MyThread2 State : %s\n",mt2.getState());
-		
+
 	}
 }
